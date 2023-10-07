@@ -12,7 +12,7 @@ int main(void)
 	{
 		putchar('0' + start);
 		putchar('0' + next);
-		if (start != 8 && next != 9)
+		if (!(start == 8 && next == 9))
 		{
 			putchar(',');
 			putchar(' ');
