@@ -27,7 +27,7 @@ int main(void)
 		if (fr == 9 && th != 9)
 		{
 			th++;
-			fr = th + 1;
+			fr = 0;
 			continue;
 		}
 
