@@ -48,7 +48,7 @@ int main(void)
 			fi++;
 			sc = 0;
 			th = fi;
-			fr = th + 1;
+			fr = sc + 1;
 			continue;
 		}
 
