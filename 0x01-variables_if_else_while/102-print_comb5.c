@@ -5,11 +5,10 @@
   */
 int main(void)
 {
-	int fi = 0;
-	int sc = 0;
-	int th = 0;
-	int fr = 1;
+	int fi, sc, th, fr;
 
+	fi = sc = th = 0;
+	fr = 1;
 	while (th < 10 && fr < 10)
 	{
 		putchar('0' + fi);
@@ -17,41 +16,31 @@ int main(void)
 		putchar(' ');
 		putchar('0' + th);
 		putchar('0' + fr);
-
 		if (!(fi == 9 && sc == 8 && th == 9 && fr == 9))
 		{
 			putchar(',');
 			putchar(' ');
 		}
-
 		if (fr == 9 && th != 9)
 		{
 			th++;
 			fr = 0;
 			continue;
 		}
-
 		if (fr == 9 && th == 9 && sc != 9)
 		{
 			sc++;
 			fr = (sc + 1) % 10;
-			if (sc == 9){
-				th = fi + 1;
-			} else {
-				th = fi;
-			}
+			th = (sc == 9) ? fi + 1 : fi;
 			continue;
 		}
-
 		if (sc == 9 && th == 9 && fr == 9)
 		{
-			fi++;
 			sc = 0;
-			th = fi;
+			th = fi = fi + 1;
 			fr = sc + 1;
 			continue;
 		}
-
 		fr++;
 	}
 	putchar('\n');
