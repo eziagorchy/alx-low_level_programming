@@ -31,11 +31,15 @@ int main(void)
 			continue;
 		}
 
-		if (fr == 9 && th == 9)
+		if (fr == 9 && th == 9 && sc != 9)
 		{
 			sc++;
-			th = fi;
-			fr = sc + 1;
+			fr = (sc + 1) % 10;
+			if (sc == 9){
+				th = fi + 1;
+			} else {
+				th = fi;
+			}
 			continue;
 		}
 
