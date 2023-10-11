@@ -1,7 +1,6 @@
 #include "main.h"
 /**
   * print_alphabet - Function to print lowercase alphabet
-  * Return: Always 0
   */
 void print_alphabet(void)
 {
@@ -12,5 +11,4 @@ void print_alphabet(void)
 		a++;
 	}
 	_putchar('\n');
-	return (0);
 }
