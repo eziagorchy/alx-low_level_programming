@@ -27,8 +27,15 @@ int main(void)
 			num++;
 			continue;
 		}
-		printf("%d ", num);
-		num++;
+		if (num < 100)
+		{
+			printf("%d ", num);
+			num++;
+		}
+		else
+		{
+			printf("%d", num);
+		}
 	}
 	return (0);
 }
