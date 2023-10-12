@@ -1,26 +1,34 @@
 #include "main.h"
 /**
-  * print_triangle - Function name
-  * @size: Function argument
-  */
+ * print_triangle - function name
+ * @size: The number that decides lenght of triangle
+ */
 void print_triangle(int size)
 {
-	int hor;
-	int vert = 0;
+	int i = 0;
+	int space;
+	int hash;
 
 	if (size <= 0)
-		_putchar('\n');
-
-	while (vert < size)
 	{
-		hor = 0;
-
-		while (hor <= vert)
+		_putchar('\n');
+		return;
+	}
+	while (i < size)
+	{
+		space = size - i - 1;
+		hash = size - space;
+		while (space > 0)
+		{
+			_putchar(' ');
+			space--;
+		}
+		while (hash > 0)
 		{
 			_putchar('#');
-			hor++;
+			hash--;
 		}
 		_putchar('\n');
-		vert++;
+		i++;
 	}
 }
