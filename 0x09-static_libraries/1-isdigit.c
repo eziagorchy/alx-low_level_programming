@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * _isdigit - determine if digit
  *
