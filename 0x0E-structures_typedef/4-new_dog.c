@@ -1,7 +1,5 @@
 #include <stdlib.h>
 #include "dog.h"
-/** #include "lenss.c" */
-/**int len_s(char *str);*/
 /**
   * new_dog - Function name for creating new dog of type struct dog/dog_t
   * @name: Dog name
@@ -14,7 +12,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *dogg;
 	char *dogg_name;
 	char *dogg_owner;
-	int i, j = 0;
+	int i = 0;
+	int j = 0;
 
 	dogg = malloc(sizeof(dog_t));
 	if (dogg == NULL)
@@ -47,4 +46,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	dogg_owner[j] = '\0';
 	dogg->owner = dogg_owner;
+	return (dogg);
 }
