@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "dog.h"
-#include "lens.c"
+/** #include "lenss.c" */
+/**int len_s(char *str);*/
 /**
   * new_dog - Function name for creating new dog of type struct dog/dog_t
   * @name: Dog name
@@ -13,13 +14,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *dogg;
 	char *dogg_name;
 	char *dogg_owner;
-	int i = 0;
-	int j = 0;
+	int i, j = 0;
 
 	dogg = malloc(sizeof(dog_t));
 	if (dogg == NULL)
 		return (NULL);
-	dogg_name = malloc((len_s(name)) * sizeof(*name));
+	dogg_name = malloc((len_st(name)) * sizeof(*name));
 	if (dogg_name == NULL)
 	{
 		free(dogg);
@@ -33,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dogg_name[i] = '\0';
 	dogg->name = dogg_name;
 	dogg->age = age; /** Create ownercopy LIKE name, assign owner to dogg below */
-	dogg_owner = malloc((len_s(owner)) * sizeof(*owner));
+	dogg_owner = malloc((len_st(owner)) * sizeof(*owner));
 	if (dogg_owner == NULL)
 	{
 		free(dogg_name);
