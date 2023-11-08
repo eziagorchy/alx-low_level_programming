@@ -1,7 +1,7 @@
 # ifndef DOG_H
 #include "dog.h"
 /**
-  * lens - Function name
+  * len_st - Function name
   * @str: String to calculate the lenght
   * Return: Return int
   */
