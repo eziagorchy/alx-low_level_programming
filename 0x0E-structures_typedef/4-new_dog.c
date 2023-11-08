@@ -19,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dogg = malloc(sizeof(dog_t));
 	if (dogg == NULL)
 		return (NULL);
-	dogg_name = malloc((lens(name)) * sizeof(*name));
+	dogg_name = malloc((len_s(name)) * sizeof(*name));
 	if (dogg_name == NULL)
 	{
 		free(dogg);
@@ -33,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dogg_name[i] = '\0';
 	dogg->name = dogg_name;
 	dogg->age = age; /** Create ownercopy LIKE name, assign owner to dogg below */
-	dogg_owner = malloc((lens(owner)) * sizeof(*owner));
+	dogg_owner = malloc((len_s(owner)) * sizeof(*owner));
 	if (dogg_owner == NULL)
 	{
 		free(dogg_name);

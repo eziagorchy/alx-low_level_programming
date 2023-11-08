@@ -1,9 +1,11 @@
+#ifndef LENS_C
+#define LENS_C
 /**
   * lens - Function name
   * @str: String to calculate the lenght
   * Return: Return int
   */
-int lens(char *str)
+int len_s(char *str)
 {
 	int i = 0;
 
@@ -11,3 +13,4 @@ int lens(char *str)
 		i++;
 	return (i + 1);
 }
+#endif
