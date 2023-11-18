@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
   * print_list - Function name
   * @h: Pointer to the head node
